@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="Generator" content="EditPlus">
+	<meta name="Author" content="">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<title>booking-목록</title>
+
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/jquery-ui.min.js"></script>
+
+	<script src="../js/swiper.min.js"></script>
+	<link rel="stylesheet" href="../js/swiper.min.css">
+	<link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+
+	<!-- 상단 헤더 -->
+	<div class="header">
+		<div>
+			<div class="logo">
+				<h1>
+					<a href="../index.html"><img src="../img/logo_w.png"></a>
+				</h1>
+			</div>
+
+			<div class="top-btn">
+				<ul>
+					<li>
+						<a href="../member/login.html">로그인</a>
+					</li>
+					<li>
+						<a href="../member/join.html">회원가입</a>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- 메뉴 -->
+	<div class="menu">
+            <div>
+                <ul>
+                    <li>
+                        <a href="#none">회사소개</a>
+						<ul class="sub-menu">
+							<li>
+								<a href="../about/intro.html">회사소개</a>	
+							</li>
+							<li>
+								<a href="../about/location.html">오시는길</a>
+							</li>
+						</ul>
+
+                    </li>
+                    <li>
+                        <a href="#none">게시판</a>
+						<ul class="sub-menu">
+							<li>
+								<a href="../bbs/notice_list.html">공지사항</a>	
+							</li>
+							<li>
+								<a href="../bbs/free_list.html">자유 게시판</a>
+							</li>
+							<li>
+								<a href="../bbs/gallery_list.html">갤러리 게시판</a>
+							</li>
+						</ul>	
+                    </li>
+                    <li>
+                        <a href="../booking/list.html">장소예약</a>
+                    </li>
+                    <li>
+                        <a href="../member/mypage.html">마이페이지</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+<style>
+
+</style>
+<!--
+
+inline-block // 요소이면서 영역 box를 만들어줌
+? 그냥 inline은 margin이나 padding을 줄때 좌우만 들어가고 상하는 들어가지 않는다
+? 여기서 해당부분을 display : inline-block을 해주면 margin과 padding이 제대로 들어가게 된다.
+
+inline 속성을 가지고 있는 태그 // 요소 text
+<span></span>
+<u></u>
+<i></i>
+<b></b>
+<strong></strong>
+<a href=""></a>
+
+block 속성을 가지고 있는 태그 // 영역 box
+<div></div>
+<p></p>
+<ul></ul>
+<li></li>
+
+-->
+
+	<!-- 장소예약 -->
+
+<div class="contents">
+
+<div class="booking-wrap">
+	<div class="booking-box">
+		<h1>장소 예약</h1>
+
+		<div class="booking-view">
+			<div class="photo-box">
+				<div class="view-photo">
+					<div class="view-banner">
+
+						<!-- Swiper -->
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="../img/r01.jpg"></div>
+								<div class="swiper-slide"><img src="../img/r02.jpg"></div>
+								<div class="swiper-slide"><img src="../img/r03.jpg"></div>
+								<div class="swiper-slide"><img src="../img/r04.jpg"></div>
+								<div class="swiper-slide"><img src="../img/r05.jpg"></div>
+								<div class="swiper-slide"><img src="../img/r06.jpg"></div>
+							</div>
+
+							<!-- Add Arrows -->
+							<div class="swiper-button-next"></div>
+							<div class="swiper-button-prev"></div>
+
+							<!-- Add Pagination -->
+							<div class="swiper-pagination"></div>
+
+						</div>
+
+						<!-- Initialize Swiper -->
+						<script>
+							var swiper = new Swiper('.swiper-container', {
+								navigation: {
+									nextEl: '.swiper-button-next',
+									prevEl: '.swiper-button-prev'
+								},
+
+								pagination: {
+									el: '.swiper-pagination'
+								},
+
+								autoplay: {
+									delay: 2500,
+									disableOnInteraction: false
+								}
+							});
+						</script>
+					</div>
+				</div>
+
+				<div class="calendar">
+
+					<div class="cal-hd">
+						<span><a href="#none">이전달</a></span>
+						<span class="month">2021.04</span>
+						<span><a href="#none">다음달</a></span>
+					</div>
+					<div class="cal-box">
+						<ul>
+							<li><a href="#none"><span class="day">일</span></a></li>
+							<li><a href="#none"><span class="day">월</span></a></li>
+							<li><a href="#none"><span class="day">화</span></a></li>
+							<li><a href="#none"><span class="day">수</span></a></li>
+							<li><a href="#none"><span class="day">목</span></a></li>
+							<li><a href="#none"><span class="day">금</span></a></li>
+							<li><a href="#none"><span class="day">토</span></a></li>
+						</ul>
+						<ul>
+							<li><a href="#none"><span class="off">28</span></a></li>
+							<li><a href="#none"><span class="off">29</span></a></li>
+							<li><a href="#none"><span class="off">30</span></a></li>
+							<li><a href="#none"><span class="off">31</span></a></li>
+							<li><a href="#none"><span>1</span></a></li>
+							<li><a href="#none"><span>2</span></a></li>
+							<li><a href="#none"><span>3</span></a></li>
+						</ul>
+						<ul>
+							<li><a href="#none"><span>4</span></a></li>
+							<li><a href="#none"><span>5</span></a></li>
+							<li><a href="#none"><span>6</span></a></li>
+							<li><a href="#none"><span>7</span></a></li>
+							<li><a href="#none"><span>8</span></a></li>
+							<li><a href="#none"><span>9</span></a></li>
+							<li><a href="#none"><span>10</span></a></li>
+						</ul>
+						<ul>
+							<li><a href="#none"><span>11</span></a></li>
+							<li><a href="#none"><span>12</span></a></li>
+							<li><a href="#none"><span>13</span></a></li>
+							<li><a href="#none"><span>14</span></a></li>
+							<li><a href="#none"><span>15</span></a></li>
+							<li><a href="#none"><span>16</span></a></li>
+							<li><a href="#none"><span>17</span></a></li>
+						</ul>
+						<ul>
+							<li><a href="#none"><span>18</span></a></li>
+							<li><a href="#none"><span>19</span></a></li>
+							<li><a href="#none"><span>20</span></a></li>
+							<li><a href="#none"><span class="today">21</span></a></li>
+							<li><a href="#none"><span>22</span></a></li>
+							<li><a href="#none"><span class="selected">23</span></a></li>
+							<li><a href="#none"><span>24</span></a></li>
+						</ul>
+						<ul>
+							<li><a href="#none"><span>25</span></a></li>
+							<li><a href="#none"><span>26</span></a></li>
+							<li><a href="#none"><span>27</span></a></li>
+							<li><a href="#none"><span>28</span></a></li>
+							<li><a href="#none"><span>29</span></a></li>
+							<li><a href="#none"><span>30</span></a></li>
+							<li><a href="#none"><span class="off">1</span></a></li>
+						</ul>
+						
+					</div>
+				</div>
+			</div>
+			
+
+			<div class="view-btn">
+				<a href="#none">예약하기</a>
+			</div>
+
+			<div class="view-detail">
+				<p>상세설명입니다.</p>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+	<!-- 하단 정보 -->
+
+	<div class="footer">
+		<div>
+			<h1>MYHOME</h1>
+			<p>대구 동구 반야월북로 57번길 38</p>
+			<p>대표자 : 배상진</p>
+			<p>이메일 : bae8719@naver.com</p>
+			<p>연락처 : 010 8719 0053</p>
+			<span>coptright(c) Light. All rights reserverd.</span>
+		</div>
+	</div>
+
+</body>

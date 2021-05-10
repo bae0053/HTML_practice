@@ -1,0 +1,72 @@
+<?php include('../sub_header.php'); ?>
+
+
+	<!-- Mypage -->
+
+<div class="contents">
+
+	<div class="mypage-wrap">
+	<div class="mypage-box">
+		<h1>Mypage 리스트</h1>
+
+		<div class="search-box">
+			<input type="text">
+			<button>검색</button>
+		</div>
+
+
+		<div class="mypage-table">
+			<ul class="table-hd">
+				<li class="notice">
+					<div class="no">번호</div>
+					<div class="location">장소명</div>
+					<div class="status">상태</div>
+					<div class="booking-date">예약일</div>
+					<div class="regi-date">등록일</div>
+				</li>
+			</ul>
+
+			<ul class="table-bd">
+				<li>
+					<div class="no">3</div>
+					<div class="location"><a href="../booking/view.html">장소1</a></div>
+					<div class="status"><span class="ok">승인</span></div>
+					<div class="booking-date">2021.04.20</div>
+					<div class="regi-date">2021.03.20</div>
+				</li>
+				<li>
+					<div class="no">2</div>
+					<div class="location"><a href="../booking/view.html">장소3</a></div>
+					<div class="status">대기</div>
+					<div class="booking-date">2021.04.20</div>
+					<div class="regi-date">2021.03.20</div>
+				</li>
+				<li>
+					<div class="no">1</div>
+					<div class="location"><a href="../booking/view.html">장소2</a></div>
+					<div class="status"><span class="no">반려</span></div>
+					<div class="booking-date">2021.04.20</div>
+					<div class="regi-date">2021.03.20</div>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="paging">
+			<ul>
+				<li><a href="#none">처음으로</a></li>
+				<li><a href="#none">이전</a></li>
+				<li class = "on"><a href="#none">1</a></li>
+				<li><a href="#none">2</a></li>
+				<li><a href="#none">3</a></li>
+				<li><a href="#none">다음</a></li>
+				<li><a href="#none">마지막</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+
+
+<?php include('../footer.php');?>
+
+</body>

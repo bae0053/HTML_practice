@@ -1,0 +1,102 @@
+<?php include("../sub_header.php");?>
+
+		<!-- 관리자 메뉴 -->
+	<div class="adm-menu">
+            <div>
+                <ul>
+					<li><a href="../adm/set.html">환경설정</a></li>
+					<li><a href="../adm/borad.html">게시판 관리</a></li>
+					<li><a href="../adm/member.html">회원 관리</a></li>
+					<li class="on"><a href="../adm/popup.html">팝업 관리</a></li>
+					<li><a href="../adm/banner.html">배너 관리</a></li>
+					<li><a href="../adm/booking.html">장소 관리</a></li>
+                </ul>
+            </div>
+    </div>
+
+	<!-- 팝업 관리 -->
+
+<div class="contents">
+
+	<div class="popup-wrap">
+	<div class="popup-box">
+		<h1>팝업 관리</h1>
+
+		<div class="search-box adm-search">
+			<input type="text">
+			<button>검색</button>
+		</div>
+
+
+		<div class="popup-table">
+			<ul class="table-hd">
+				<li>
+					<div class="no">번호</div>
+					<div class="popup_name">팝업명</div>
+					<div class="period">사용기간</div>
+					<div class="use">사용여부</div>
+					<div class="date">등록일</div>
+					<div class="">관리</div>
+				</li>
+			</ul>
+
+			<ul class="table-bd">
+				<li>
+					<div class="no">3</div>
+					<div class="popup_name">팝업3</div>
+					<div class="period">2021.01.01 ~ 2021.06.21</div>
+					<div class="use">사용</div>
+					<div class="date">2020.12.23</div>
+					<div class="control">
+						<span class="modi"><a href="./popup_form.html">수정</a></span>
+						<span class="del"><a href="#none">삭제</a></span>
+					</div>
+				</li>
+				<li>
+					<div class="no">2</div>
+					<div class="popup_name">팝업2</div>
+					<div class="period">2021.05.01 ~ 2021.06.21</div>
+					<div class="use">미사용</div>
+					<div class="date">2021.04.21</div>
+					<div class="control">
+						<span class="modi"><a href="./popup_form.html">수정</a></span>
+						<span class="del"><a href="#none">삭제</a></span>
+					</div>
+				</li>
+				<li>
+					<div class="no">1</div>
+					<div class="popup_name">팝업1</div>
+					<div class="period">2021.03.01 ~ 2021.06.21</div>
+					<div class="use">사용</div>
+					<div class="date">2021.02.21</div>
+					<div class="control">
+						<span class="modi"><a href="./popup_form.html">수정</a></span>
+						<span class="del"><a href="#none">삭제</a></span>
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="paging">
+			<ul>
+				<li><a href="#none">처음으로</a></li>
+				<li><a href="#none">이전</a></li>
+				<li class = "on"><a href="#none">1</a></li>
+				<li><a href="#none">2</a></li>
+				<li><a href="#none">3</a></li>
+				<li><a href="#none">다음</a></li>
+				<li><a href="#none">마지막</a></li>
+			</ul>
+		</div>
+
+
+		<div class="borad-btn-box">
+			<a href="./popup_form.html">팝업 등록</a>
+		</div>
+
+	</div>
+</div>
+</div>
+
+
+<?php include("../sub_footer.php");?>

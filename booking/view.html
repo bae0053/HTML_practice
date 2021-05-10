@@ -1,0 +1,142 @@
+<?php include('../sub_header.php'); ?>
+
+	<!-- 장소예약 -->
+
+
+	
+<div class="contents">
+
+<div class="booking-wrap">
+	<div class="booking-box">
+		<h1>장소 예약</h1>
+
+		<div class="booking-view">
+			<div class="photo-box">
+				<div class="view-photo">
+					<div class="view-banner">
+
+						<!-- Swiper -->
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="../img/r01.jpg"></div>
+								<div class="swiper-slide"><img src="../img/r02.jpg"></div>
+								<div class="swiper-slide"><img src="../img/r03.jpg"></div>
+								<div class="swiper-slide"><img src="../img/r04.jpg"></div>
+								<div class="swiper-slide"><img src="../img/r05.jpg"></div>
+								<div class="swiper-slide"><img src="../img/r06.jpg"></div>
+							</div>
+
+							<!-- Add Arrows -->
+							<div class="swiper-button-next"></div>
+							<div class="swiper-button-prev"></div>
+
+							<!-- Add Pagination -->
+							<div class="swiper-pagination"></div>
+
+						</div>
+
+						<!-- Initialize Swiper -->
+						<script>
+							var swiper = new Swiper('.swiper-container', {
+								navigation: {
+									nextEl: '.swiper-button-next',
+									prevEl: '.swiper-button-prev'
+								},
+
+								pagination: {
+									el: '.swiper-pagination'
+								},
+
+								autoplay: {
+									delay: 2500,
+									disableOnInteraction: false
+								}
+							});
+						</script>
+					</div>
+				</div>
+
+				<div class="calendar">
+
+					<div class="cal-hd">
+						<span><a href="#none">이전달</a></span>
+						<span class="month">2021.04</span>
+						<span><a href="#none">다음달</a></span>
+					</div>
+					<div class="cal-box">
+						<ul>
+							<li><a href="#none"><span class="day">일</span></a></li>
+							<li><a href="#none"><span class="day">월</span></a></li>
+							<li><a href="#none"><span class="day">화</span></a></li>
+							<li><a href="#none"><span class="day">수</span></a></li>
+							<li><a href="#none"><span class="day">목</span></a></li>
+							<li><a href="#none"><span class="day">금</span></a></li>
+							<li><a href="#none"><span class="day">토</span></a></li>
+						</ul>
+						<ul>
+							<li><a href="#none"><span class="off">28</span></a></li>
+							<li><a href="#none"><span class="off">29</span></a></li>
+							<li><a href="#none"><span class="off">30</span></a></li>
+							<li><a href="#none"><span class="off">31</span></a></li>
+							<li><a href="#none"><span>1</span></a></li>
+							<li><a href="#none"><span>2</span></a></li>
+							<li><a href="#none"><span>3</span></a></li>
+						</ul>
+						<ul>
+							<li><a href="#none"><span>4</span></a></li>
+							<li><a href="#none"><span>5</span></a></li>
+							<li><a href="#none"><span>6</span></a></li>
+							<li><a href="#none"><span>7</span></a></li>
+							<li><a href="#none"><span>8</span></a></li>
+							<li><a href="#none"><span>9</span></a></li>
+							<li><a href="#none"><span>10</span></a></li>
+						</ul>
+						<ul>
+							<li><a href="#none"><span>11</span></a></li>
+							<li><a href="#none"><span>12</span></a></li>
+							<li><a href="#none"><span>13</span></a></li>
+							<li><a href="#none"><span>14</span></a></li>
+							<li><a href="#none"><span>15</span></a></li>
+							<li><a href="#none"><span>16</span></a></li>
+							<li><a href="#none"><span>17</span></a></li>
+						</ul>
+						<ul>
+							<li><a href="#none"><span>18</span></a></li>
+							<li><a href="#none"><span>19</span></a></li>
+							<li><a href="#none"><span>20</span></a></li>
+							<li><a href="#none"><span class="today">21</span></a></li>
+							<li><a href="#none"><span>22</span></a></li>
+							<li><a href="#none"><span class="selected">23</span></a></li>
+							<li><a href="#none"><span>24</span></a></li>
+						</ul>
+						<ul>
+							<li><a href="#none"><span>25</span></a></li>
+							<li><a href="#none"><span>26</span></a></li>
+							<li><a href="#none"><span>27</span></a></li>
+							<li><a href="#none"><span>28</span></a></li>
+							<li><a href="#none"><span>29</span></a></li>
+							<li><a href="#none"><span>30</span></a></li>
+							<li><a href="#none"><span class="off">1</span></a></li>
+						</ul>
+						
+					</div>
+				</div>
+			</div>
+			
+
+			<div class="view-btn">
+				<a href="./list.html">목록으로</a>
+				<a href="#none">예약하기</a>
+			</div>
+
+			<div class="view-detail">
+				<p>상세설명입니다.</p>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+<?php include('../footer.php');?>
+
+</body>

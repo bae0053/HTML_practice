@@ -1,0 +1,64 @@
+<?php include("../sub_header.php");?>
+
+
+
+
+
+<div class="check-wrap">
+
+	<h1>예약 확인</h1>
+
+	<div class="search-box">
+		<input type="text">
+		<button>검색</button>
+	</div>
+
+	<div class="b-check-box">
+		<ul class="table-hd">
+			<li> <!-- table -->
+				<div class="no">번호</div> <!-- table cell-->
+				<div class="title">제목</div> <!-- table cell-->
+				<div class="status">상태</div> <!-- table cell-->
+				<div class="b-date">예약일</div> <!-- table cell-->
+				<div class="r-date">등록일</div> <!-- table cell-->
+			</li>
+		</ul>
+		<ul class="table-bd">
+			<li> <!-- table -->
+				<div class="no">3</div> <!-- table cell-->
+				<div class="title">방구석 라이브 김형태</div> <!-- table cell-->
+				<div class="status">대기</div> <!-- table cell-->
+				<div class="b-date">2021.05.21</div> <!-- table cell-->
+				<div class="r-date">2021.05.02</div> <!-- table cell-->
+			</li>
+			<li> <!-- table -->
+				<div class="no">2</div> <!-- table cell-->
+				<div class="title">지하실 노래방 황치열</div> <!-- table cell-->
+				<div class="status"><span class="ok">승인</span></div> <!-- table cell-->
+				<div class="b-date">2021.04.28</div> <!-- table cell-->
+				<div class="r-date">2021.04.12</div> <!-- table cell-->
+			</li>
+			<li> <!-- table -->
+				<div class="no">1</div> <!-- table cell-->
+				<div class="title">방구석 노래방 장범준</div> <!-- table cell-->
+				<div class="status"><span class="cancel">반려</span></div> <!-- table cell-->
+				<div class="b-date">2021.03.22</div> <!-- table cell-->
+				<div class="r-date">2021.03.01</div> <!-- table cell-->
+			</li>
+		</ul>
+	</div>
+
+	<div class="paging">
+		<div>
+			<ul>
+				<li><a href="#none">처음</a></li>
+				<li><a href="#none">이전</a></li>
+				<li class="on"><a href="#none">1</a></li>
+				<li><a href="#none">다음</a></li>
+				<li><a href="#none"> 끝 </a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<?php include("../sub_footer.php");?>

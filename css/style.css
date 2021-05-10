@@ -1,0 +1,526 @@
+/* 초기화 */
+html {overflow-y:scroll}
+body {margin:0;padding:0;font-size:0.75em; font-family:'Nanum Gothic', 'Malgun Gothic', dotum, sans-serif; background:#f5f5f5;}
+html, h1, h2, h3, h4, h5, h6, form, fieldset, img {margin:0;padding:0;border:0}
+h1, h2, h3, h4, h5, h6 {font-size:17px; font-family:'NanumSquare','Malgun Gothic', dotum, sans-serif}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
+
+ul, dl,dt,dd {margin:0;padding:0;list-style:none}
+legend {position:absolute;margin:0;padding:0;font-size:0;line-height:0;text-indent:-9999em;overflow:hidden}
+label, input, button, select, img {vertical-align:middle;font-size:1em}
+input, button {margin:0;padding:0; font-family:'Nanum Gothic', 'Malgun Gothic', dotum, sans-serif;font-size:1em}
+input[type="submit"]{cursor:pointer}
+button {cursor:pointer}
+
+textarea, select {font-family:'Nanum Gothic', 'Malgun Gothic', dotum, 
+sans-serif;font-size:1em} select {margin:0} p 
+{margin:0;padding:0;word-break:break-all} hr {display:none} pre 
+{overflow-x:scroll;font-size:1.1em} a {color:#000;text-decoration:none}
+
+*, :after, :before {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+img { max-width: 100%; height: auto;width: auto\9;}
+
+/* 헤더 - 로고, 상단메뉴 */
+/* overflow:hidden을 넣어줘야지 float의 영향을 받지 않는다 */
+.header {background: #3e80be;overflow: hidden;}
+
+.header > div {overflow: hidden;max-width: 1200px; margin: 0 auto;}
+
+.header .logo {float: left;}
+.header .logo h1 {font-size: 17px;}
+.header .logo h1 a {display: block; padding: 5px;}
+.header .logo h1 img {width: 100px;}
+.header .top-btn {float: right;}
+.header .top-btn ul li a {font-size: 14px;color: #fff;}
+.header .top-btn ul {overflow: hidden;margin-top: 5px;}
+.header .top-btn ul li {float: left;margin-left: 10px;}
+
+/* display : block <<<< 박스 개념이 없는 대상한테 박스 개념을 부여함 */
+.header .top-btn ul li a {display: block;padding: 10px;}
+
+.menu{border-bottom: 1px solid #ccc;}
+.menu > div {max-width: 1200px;margin: 0 auto;}
+
+/* 가운데 정렬하는 방법
+
+1. width : 25% 를 써서 각 li를 꽉 채우는 방법
+
+.menu div ul li {float : left; width : 25%; display:block; padding : 5px;}
+
+2. li에 float를 쓰지 않고 display : inline-block을 쓰고 ul에 text-align : center를 주는 방법
+
+*/
+.menu > div > ul {text-align: center;}
+.menu > div > ul > li {display: inline-block; position: relative;}
+.menu > div > ul > li > a {display: block; font-size:17px; padding:10px 40px; margin: 10px; font-weight: bold; color: #333;}
+.menu > div > ul > li:hover{background: #fff;}
+.menu > div > ul > li a:hover{background: #fff; color : #057bf5;}
+
+
+/* z-index의 숫자가 높읗 수록 위쪽 레이아웃에 올라온다*/
+.menu > div > ul > li > ul.sub-menu{position:absolute; z-index: 9; background:#fff; display:none; width: 100%; padding: 10px;}
+.menu > div > ul > li > ul.sub-menu a{display: block;font-size: 15px; font-weight: bold; color: #333; width: 100%; padding: 10px 0;}
+.menu > div > ul > li:hover ul.sub-menu{display: block;}
+.menu > div > ul > li:hover ul.sub-menu li a:hover{color: #057bf5;}
+
+
+/* 상단 배너*/
+.banner .swiper-container {max-width: 1200px;margin: 0 auto;}
+.banner .swiper-container img { width: 1200px;height: 700px;}
+
+
+/* 게시판 및 하단 배너*/
+.tab-menu ul {overflow: hidden;text-align: center;}
+.tab-menu ul li {float: left;width: 33.33%;}
+.tab-menu ul li a {display: block;padding: 5px 10px;border-bottom: 1px solid #e1e1e1;font-size: 14px;color : #888;}
+.tab-menu ul li.on a {color: #057bf5;font-weight: bold;border-bottom: 1px solid #057bf5;}
+.tab-menu ul li:hover a {color: #057bf5;}
+
+.tab-content ul li {overflow: hidden;}
+.tab-content ul li:hover{border-bottom: 1px dashed #e1e1e1;}
+
+.tab-content ul li a {float: left;display: block;padding: 5px;}
+.tab-content ul li a:before{content :"";display: inline-block;width: 3px;height: 3px;background: #ccc;-wenkit-border-radius : 50%;-moz-border-radius : 50%; border-radius : 50%;vertical-align: middle;margin-right: 5px;}
+.tab-content ul li span {float: right;padding: 5px;font-size: 13px;color: #888;}
+
+.bbs-box > div {overflow: hidden;max-width: 1200px;margin: 0 auto;}
+.bbs-box > div > .board-box {float: left;width: 40%;}
+.bbs-box > div > .board-box > div {padding: 10px;}
+.bbs-box > div > .right-banner {float: right;width: 60%;}
+.bbs-box > div > .right-banner .r-slide {max-height: 300px;width: auto;margin: auto;padding: 10px;}
+.bbs-box > div > .right-banner .r-slide img {width: 100%; height: 300px;}
+
+
+
+/*하단 정보*/
+.footer{background: #444; color: #ccc;}
+.footer > div{padding: 20px;}
+.footer h1{font-size: 15px; margin-bottom: 10px;}
+.footer p{font-size: 13px;line-height: 160%;padding: 0; margin: 0;}
+.footer span{font-size: 12px; color: #999;}
+
+
+/*로그인*/
+.login_box{padding: 20px;}
+.login_box h1{text-align: center;margin-bottom: 20px;}
+.login_box .login{max-width: 400px; margin: 0 auto; border :1px solid #e1e1e1; border-radius:25px; padding: 20px; background: #fff;box-shadow : 0px 3px 5px 2px rgb(0 0 0 /20%);}
+.login_box .login li input {width: 100%;height: 40px;padding: 5px; border : 1px solid #ccc;border-radius:10px;}
+.login_box .login li {margin: 5px;}
+.login_box .login li button {width: 100%; height: 40px;background:#3e80be;color :#fff;border-radius:10px;border: 0; transition : all 0.3s;}
+.login_box .login li button:hover{background: #0b5091;}
+.login_btn{text-align: center;margin-bottom: 30px;}
+
+/*회원가입*/
+
+.join-box {padding: 20px;}
+.join-box .join-form label{display: inline-block; width: 100px;}
+.join-box h1 {text-align: center; margin-bottom: 20px;}
+
+.join-box .join-form{max-width: 800px; margin: 0 auto; border :1px solid #e1e1e1; border-radius:25px; padding: 20px; background: #fff;box-shadow : 0px 3px 5px 2px rgb(0 0 0 /20%);}
+.join-box .join-form ul li {margin: 10px;}
+.join-box .join-form input[type = "text"] {width: 85%; height: 40px; border: 1px solid #ccc; padding: 5px; border-radius:10px;}
+.join-box .join-form input[type = "password"] {width: 85%; height: 40px; border: 1px solid #ccc; padding: 5px; border-radius:10px;}
+.join-box .join-form select{width: 100%; height: 40px; border: 1px solid #ccc; padding: 5px; margin-top: 5px;}
+
+.join-box .join-form ul li.gender span{display : inline-block;}
+.join-box .join-form ul li.gender span label{display : inline-block;}
+
+.join-box .join-form ul li.address span {margin-bottom: 5px; display: block;}
+.join-box .join-form ul li.address span input[type="text"] { width : 100%; }
+.join-box .join-form ul li.address span.zipcode {display: inline-block;}
+.join-box .join-form ul li.address span.zipcode input {width: 100px;}
+.join-box .join-form ul li.address span.zipcode button {width: 100px; height: 40px; background: #3e80be ;color: #fff;border: 0; border-radius : 10px; transition : all 0.3s}
+.join-box .join-form ul li.address span.zipcode button:hover {background: #0b5091;}
+
+
+.join-box .join-btn{text-align: center; margin-top: 20px;}
+.join-box .join-btn a{display: inline-block;background: #3e80be;color: #fff;margin: 5px; padding: 10px 0px; width: 100px;transition : all 0.3s}
+.join-box .join-btn a:hover{background: #0b5091;}
+
+
+
+/*콘텐츠 영역*/
+.contents{max-width: 1200px;margin: 0 auto;}
+
+/*공지사항*/
+.notice-box h1{text-align: center; margin-top: 5px; font-size: 20px;margin-bottom: 5px;}
+
+/*검색 영역*/
+.search-box{text-align: right; margin-bottom: 5px;}
+.search-box input{width: 100px; border: 1px solid #ccc; height: 30px;}
+.search-box button{border:1px solid #ccc;height: 30px;padding: 0 20px;background: #3e80be;color: #fff;}
+
+/*공지 내용*/
+.notice-table{background: #fff;}
+.notice-table ul.table-hd{text-align: center; border-top: 2px solid #000;}
+.notice-table ul.table-bd{text-align: center;}
+.notice-table ul.table-bd .subject{text-align: left;}
+
+.notice-table ul li{display: table; width: 100%;}
+.notice-table ul li > div{display: table-cell;border-bottom:1px solid #ccc; padding: 10px;}
+
+
+.notice-table ul li > div.no {width: 10%;}
+.notice-table ul li > div.subject {width: 50%;}
+.notice-table ul li > div.subject a:hover{text-decoration : underline; color: #000;}
+.notice-table ul li > div.name {width: 20%;}
+.notice-table ul li > div.date {width: 20%;}
+
+/* paging 영역*/
+.paging ul {text-align: center;}
+.paging ul li {display: inline-block; margin: 5px 0px;}
+.paging ul li a{display: block; padding: 5px 10px; border: 1px solid #ccc; background: #fff;}
+.paging ul li.on a{background: #3e80be;color: #fff;border: 1px solid #000;}
+
+
+/* 글쓰기 버튼 영역*/
+.bbs-btn-box{text-align: right; margin: 10px 0;}
+.bbs-btn-box a{display: inline-block; text-align: center; background: #000; color: #fff; padding: 10px; width: 80px; border-radius : 5px; background:#3e80be;}
+
+
+/*글쓰기 영역*/ 
+.write-form {max-width: 1200px; width: 100%; border: 1px solid #ccc; border-radius : 5px; background: #f1f1f1;margin-top: 10px;}
+.write-form ul li {font-size: 17px; padding: 10px;}
+.write-form ul li label {float : left; padding: 5px; display: block;}
+.write-form ul li input[type="text"] {width: 100%; padding: 10px; background: #fff; border: 1px solid #000;}
+.write-form ul li input[type="file"] {padding: 10px;}
+.write-form ul li textarea{width: 100%; height: 500px; background: #fff;}
+.write-form ul li.check{display: inline-block;background: #fff; width: 99%;border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;}
+.write-form ul li.check input {float : left; padding: 5px; margin: 14px 0;}
+
+
+/*공지사항 내용 보기*/
+.view h2{margin-bottom: 10px; padding: 10px; border-bottom: 1px solid #ccc;}
+.view span{display: inline-block; padding: 10px; font-size: 13px;}
+
+.view .view-con{border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; padding: 20px;background: #fff;}
+.view .file-down a{display: block;margin: 5px 0 ;padding: 5px; background: #e1e1e1;}
+.view-f-btn a.del{background: #ff4242;}
+.view-f-btn a.modi{background: #3e80be;}
+
+
+/* 자유 게시판 */
+.free-box h1{text-align: center; margin-top: 5px; font-size: 20px;margin-bottom: 5px;}
+/* 자유게시판의 table은 공지사항과 동일 */
+
+
+/*갤러리 게시판*/
+.gallery-box h1{text-align: center; margin-top: 5px; font-size: 20px;margin-bottom: 5px;}
+.gallery-table > ul{overflow: hidden;}
+.gallery-table > ul > li img{height: auto; width: 300px;}
+.gallery-table > ul > li{width: 25%; float: left;}
+.gallery-table > ul > li:nth-child(4n+1) {clear:both;}
+.gallery-table > ul > li > div{padding: 10px;}
+
+.gallery-table .thumb{padding-bottom: 0;}
+.gallery-table .info a{display: block; font-size: 15px;}
+.gallery-table .info span { padding: 10px;}
+
+
+/* 장소 예약*/
+.booking-box h1{text-align: center; margin-top: 5px; font-size: 20px;margin-bottom: 5px;}
+.booking-table > ul{overflow: hidden;}
+.booking-table > ul > li img{max-height: 220px;}
+.booking-table > ul > li {overflow: hidden; border: 1px solid #ccc; background: #fff; margin: 5px;}
+.booking-table > ul > li > div{padding: 10px; float: left;}
+.booking-table .thumb{width: 15%; text-align: center;}
+.booking-table .info {width: 85%;}
+.booking-table .info p{font-size: 14px; color: #444; margin: 10px 0; max-height: 55px; overflow: hidden; min-height: 55px;}
+.booking-table .info a{display: block; font-size: 17px;}
+.booking-table .info span {color: #888;}
+
+
+/* 장소 예약 내용 */ 
+.booking-view .photo-box {overflow: hidden;}
+.booking-view .photo-box .view-photo {float: left; width: 50%; height: 310px;margin: 10px 0;}
+.booking-view .photo-box .calendar {float: right; width: 50%; height: 310px ;border: 1px solid black;padding: 5px;margin: 10px 0;}
+
+.booking-view .photo-box .view-banner .swiper-container img {width: 100%; height: 310px;}
+
+.cal-box ul{overflow: hidden; padding: 8px;margin: 5px 0;}
+.cal-box ul li {float: left;width: 14.28%;;text-align: center;}
+.cal-box ul li:first-child a span{color: #ff4c4c;}
+.cal-box ul li:last-child a span{color: #1499d1;}
+.cal-box ul li a span.off {color: #aaa;}
+.cal-box ul li a span.today {padding: 5px; background: #1086ff; color: #fff;}
+.cal-box ul li a span.selected {padding: 5px; border: 3px solid black;}
+.cal-box ul li a span:hover:not(.day) {padding: 5px; border: 3px solid black;}
+
+.cal-hd {text-align: center; border-bottom: 1px solid #aaa;}
+.cal-hd span{display: inline-block;margin: 10px;padding: 10px;}
+.cal-hd span.month{font-size: 19px;font-weight: bold;}
+
+.view-btn{text-align: right;}
+.view-btn a{display: inline-block;padding: 5px 10px; background: #000;color: #fff; transition : all 0.3s;}
+.view-btn a:hover { background: #3e80be;}
+
+.view-detail {background: #fff;border: 1px solid #ccc; margin: 10px 0;padding: 20px;min-height: 200px;}
+
+
+
+/* 마이페이지 목록 */
+
+.mypage-box h1{text-align: center; margin-top: 5px; font-size: 20px;margin-bottom: 5px;}
+.mypage-table{background: #fff;}
+.mypage-table ul.table-hd{text-align: center; border-top: 2px solid #000; border-bottom: 2px solid #ccc; font-size: 14px; font-weight: bold;}
+.mypage-table ul.table-bd{text-align: center;}
+.mypage-table ul.table-bd .subject{text-align: left;}
+
+.mypage-table ul li{display: table; width: 100%;}
+.mypage-table ul li:hover:not(.notice){background: #eee;}
+.mypage-table ul li > div{display: table-cell;border-bottom:1px solid #ccc; padding: 10px;}
+
+
+.mypage-table ul li > div.no {width: 10%;}
+.mypage-table ul li > div.location {width: 60%;}
+.mypage-table ul li > div.location a:hover{text-decoration : underline; color: #000;}
+.mypage-table ul li > div.status {width: 10%;}
+.mypage-table ul li > div.booking-date {width: 10%;}
+.mypage-table ul li > div.regi-date {width: 10%;}
+
+.mypage-table .table-bd li div.location {text-align: left;}
+
+.mypage-table .table-bd li div.status span.ok{color: blue; font-weight: bold;}
+.mypage-table .table-bd li div.status span.no{color: red; font-weight: bold;}
+
+
+/* 관리자 메뉴 */
+.adm-menu ul{text-align: center;}
+.adm-menu ul li {display: inline-block;margin: 5px;}
+.adm-menu ul li:before{content : "";display: inline-block;width:1px;height:10px;background: #000;margin-right: 15px;}
+.adm-menu ul li:last-child:after{content : "";display: inline-block;width:1px;height:10px;background: #000;margin-left: 15px;}
+.adm-menu ul li a {display: inline-block;padding: 5px 10px; background: #f5f5f5;color: #000; font-size: 17px; padding: 10px 40px;}
+.adm-menu ul li a:hover{color: #26649e; font-weight: bold;}
+.adm-menu ul li.on a{color: #26649e;font-weight: bold;}
+
+
+
+/* 관리자 환경설정 */
+.adm-set {padding: 20px;}
+.adm-set .set-form label{display: inline-block; width: 100px;}
+.adm-set h1 {text-align: center; margin-bottom: 20px;}
+
+.adm-set .set-form{max-width: 800px; margin: 0 auto; border :1px solid #e1e1e1; border-radius:25px; padding: 20px; background: #fff;box-shadow : 0px 3px 5px 2px rgb(0 0 0 /20%);}
+.adm-set .set-form ul li {margin: 10px;}
+.adm-set .set-form input[type = "text"] {width: 85%; height: 40px; border: 1px solid #ccc; padding: 5px; border-radius:10px;}
+
+
+.adm-set .set-form ul li.address span {margin-bottom: 5px; display: block;}
+.adm-set .set-form ul li.address span input[type="text"] { width : 100%; }
+.adm-set .set-form ul li.address span.zipcode {display: inline-block;}
+.adm-set .set-form ul li.address span.zipcode input {width: 100px;}
+.adm-set .set-form ul li.address span.zipcode button {width: 100px; height: 40px; background: #3e80be ;color: #fff;border: 0; border-radius : 10px; transition : all 0.3s}
+.adm-set .set-form ul li.address span.zipcode button:hover {background: #0b5091;}
+
+
+.adm-set .set-btn{text-align: center; margin-top: 20px;}
+.adm-set .set-btn a{display: inline-block;background: #3e80be;color: #fff;margin: 5px; padding: 10px 0px; width: 100px;transition : all 0.3s; border-radius : 5px}
+.adm-set .set-btn a:hover{background: #0b5091;}
+
+
+/* 관리자 게시판 관리 영역 */
+.borad-box {text-align: center; margin-bottom: 20px; padding: 20px;}
+.borad-table{background: #fff;}
+.borad-table ul.table-hd{text-align: center; border-top: 2px solid #000; font-size: 14px; font-weight: bold;}
+.borad-table ul.table-bd{text-align: center;}
+.borad-table ul.table-bd .subject{text-align: left;}
+
+.borad-table ul li{display: table; width: 100%;}
+.borad-table ul li > div{display: table-cell;border-bottom:1px solid #ccc; padding: 10px;}
+
+
+.borad-table ul li > div.borad_name {width: 60%;}
+.borad-table ul li > div.subject a:hover{text-decoration : underline; color: #000;}
+.borad-table ul li > div.type {width: 10%;}
+.borad-table ul li > div.control {width: 10%;}
+.borad-table ul li > div.date {width: 10%;}
+
+.borad-table ul li div.control span.modi a{color: blue; font-weight: bold;}
+.borad-table ul li div.control span.del a{color: red;font-weight: bold;}
+
+
+/* 게시판 생성 영역*/
+.borad-btn-box{text-align: right; margin: 10px 0;}
+.borad-btn-box a{display: inline-block; text-align: center; background: #000; color: #fff; padding: 10px; width: 100px; border-radius : 5px; background:#3e80be;}
+
+.create-box{padding: 20px;}
+.create-box h1{text-align: center; margin-bottom: 20px;margin-bottom: 5px;}
+.create-form {max-width: 800px; margin: 0 auto; border :1px solid #e1e1e1; border-radius:25px; padding: 20px; background: #fff;box-shadow : 0px 3px 5px 2px rgb(0 0 0 /20%);}
+.create-form ul li {font-size: 17px; padding: 10px;}
+.create-form ul li label {float : left; padding: 5px; display: block;}
+.create-form ul li input[type="text"] {width: 100%; border: 1px solid #ccc; padding: 5px; border-radius:10px;}
+.create-form ul li select {width: 10%;}
+.create-form ul li.check{display: inline-block;}
+.create-form ul li.check input {float : left; padding: 5px; margin: 14px 0;}
+.create-f-btn {text-align: center;}
+
+
+/* 관리자 회원 관리 */
+.member-box {text-align: center; margin-bottom: 20px; padding: 20px;}
+.member-table{background: #fff;}
+.member-table ul.table-hd{text-align: center; border-top: 2px solid #000; font-size: 14px; font-weight: bold;}
+.member-table ul.table-bd{text-align: center;}
+.member-table ul.table-bd .subject{text-align: left;}
+
+.member-table ul li{display: table; width: 100%;}
+.member-table ul li > div{display: table-cell;border-bottom:1px solid #ccc; padding: 10px;}
+
+
+.member-table ul li > div.no {width: 10%;}
+.member-table ul li > div.name {width: 10%;}
+.member-table ul li > div.phone {width: 10%;}
+.member-table ul li > div.mail {width: 15%;}
+.member-table ul li > div.birth {width: 10%;}
+.member-table ul li > div.address {width: 25%;}
+.member-table ul li > div.date {width: 10%;}
+.member-table ul li > div.control {width: 10%;}
+
+
+.member-table ul li div.control span.modi a{color: blue; font-weight: bold;}
+.member-table ul li div.control span.del a{color: red;font-weight: bold;}
+
+
+/* 관리자 회원 등록 */
+.adm-regi {padding: 20px;}
+.adm-regi .set-form label{display: inline-block; width: 100px;}
+.adm-regi h1 {text-align: center; margin-bottom: 20px;}
+
+.adm-regi .set-form{max-width: 800px; margin: 0 auto; border :1px solid #e1e1e1; border-radius:25px; padding: 20px; background: #fff;box-shadow : 0px 3px 5px 2px rgb(0 0 0 /20%);}
+.adm-regi .set-form ul li {margin: 10px;}
+.adm-regi .set-form input[type = "text"] {width: 85%; height: 40px; border: 1px solid #ccc; padding: 5px; border-radius:10px;}
+.adm-regi .set-form input[type = "password"] {width: 85%; height: 40px; border: 1px solid #ccc; padding: 5px; border-radius:10px;}
+.adm-regi .set-form select {width: 10%}
+
+
+.adm-regi .set-form ul li.address span {margin-bottom: 5px; display: block;}
+.adm-regi .set-form ul li.address span input[type="text"] { width : 100%; }
+.adm-regi .set-form ul li.address span.zipcode {display: inline-block;}
+.adm-regi .set-form ul li.address span.zipcode input {width: 100px;}
+.adm-regi .set-form ul li.address span.zipcode button {width: 100px; height: 40px; background: #3e80be ;color: #fff;border: 0; border-radius : 10px; transition : all 0.3s}
+.adm-regi .set-form ul li.address span.zipcode button:hover {background: #0b5091;}
+
+
+.adm-regi .set-btn{text-align: center; margin-top: 20px;}
+.adm-regi .set-btn a{display: inline-block;background: #3e80be;color: #fff;margin: 5px; padding: 10px 0px; width: 100px;transition : all 0.3s}
+.adm-regi .set-btn a:hover{background: #0b5091;}
+
+
+/* 팝업 관리 영역 */ 
+.popup-box {text-align: center; margin-bottom: 20px; padding: 20px;}
+.popup-table{background: #fff;}
+.popup-table ul.table-hd{text-align: center; border-top: 2px solid #000; font-size: 14px; font-weight: bold;}
+.popup-table ul.table-bd{text-align: center;}
+.popup-table ul.table-bd .subject{text-align: left;}
+
+.popup-table ul li{display: table; width: 100%;}
+.popup-table ul li > div{display: table-cell;border-bottom:1px solid #ccc; padding: 10px;}
+
+
+.popup-table ul li > div.no{width: 10%;}
+.popup-table ul li > div.popup_name{width: 40%;}
+.popup-table ul li > div.period{width: 20%;}
+.popup-table ul li > div.use{width: 10%;}
+.popup-table ul li > div.date{width: 10%;}
+.popup-table ul li > div.control{width: 10%;}
+
+.popup-table ul li div.control span.modi a{color: blue; font-weight: bold; padding: 5px;}
+.popup-table ul li div.control span.modi a:hover{color: #fff; font-weight: bold; background: #3598ff; padding: 5px;}
+
+.popup-table ul li div.control span.del a{color: red;font-weight: bold;padding: 5px;}
+.popup-table ul li div.control span.del a:hover{color: #fff; font-weight: bold; background: #ff4444; padding: 5px;}
+
+
+/* 팝업 등록 영격 */
+.popup-f-box{padding: 20px;}
+.popup-f-box h1{text-align: center; margin-bottom: 20px;margin-bottom: 5px;}
+.popup-form {max-width: 800px; margin: 0 auto; border :1px solid #e1e1e1; border-radius:25px; padding: 20px; background: #fff;box-shadow : 0px 3px 5px 2px rgb(0 0 0 /20%);}
+.popup-form ul li {font-size: 17px; padding: 10px;}
+.popup-form ul li label {float : left; padding: 5px; display: block;}
+.popup-form ul li input[type="text"] {width: 100%; border: 1px solid #ccc; padding: 5px; border-radius:10px;}
+.popup-form ul li.check{display: inline-block;}
+.popup-form ul li.check input {float : left; padding: 5px; margin: 14px 0;}
+
+.popup-f-btn {text-align: center;}
+
+
+/* 배너 관리 영역 */
+
+.banner-box {text-align: center; margin-bottom: 20px; padding: 20px;}
+.banner-table{background: #fff;}
+.banner-table ul.table-hd{text-align: center; border-top: 2px solid #000; font-size: 14px; font-weight: bold;}
+.banner-table ul.table-bd{text-align: center;}
+.banner-table ul.table-bd .subject{text-align: left;}
+
+.banner-table ul li{display: table; width: 100%;}
+.banner-table ul li > div{display: table-cell;border-bottom:1px solid #ccc; padding: 10px;}
+
+
+.banner-table ul li > div.no{width: 10%;}
+.banner-table ul li > div.pos{width: 10%;}
+.banner-table ul li > div.banner_name{width: 25%;}
+.banner-table ul li > div.period{width: 25%;}
+.banner-table ul li > div.use{width: 10%;}
+.banner-table ul li > div.date{width: 10%;}
+.banner-table ul li > div.control{width: 10%;}
+
+.banner-table ul li div.control span.modi a{color: blue; font-weight: bold; padding: 5px;}
+.banner-table ul li div.control span.modi a:hover{color: #fff; font-weight: bold; background: #3598ff; padding: 5px;}
+
+.banner-table ul li div.control span.del a{color: red;font-weight: bold;padding: 5px;}
+.banner-table ul li div.control span.del a:hover{color: #fff; font-weight: bold; background: #ff4444; padding: 5px;}
+
+/* 배너 등록 영역 */
+.banner-f-box{padding: 20px;}
+.banner-f-box h1{text-align: center; margin-bottom: 20px;margin-bottom: 5px;}
+.banner-form {max-width: 800px; margin: 0 auto; border :1px solid #e1e1e1; border-radius:25px; padding: 20px; background: #fff;box-shadow : 0px 3px 5px 2px rgb(0 0 0 /20%);}
+.banner-form ul li {font-size: 17px; padding: 10px;}
+.banner-form ul li label {float : left; padding: 5px; display: block;}
+.banner-form ul li input[type="text"] {width: 100%; border: 1px solid #ccc; padding: 5px; border-radius:10px;}
+.banner-form ul li.check{display: inline-block;}
+.banner-form ul li.check input {float : left; padding: 5px; margin: 14px 0;}
+.banner-form select {width: 10%}
+
+/* 관리자 장소 리스트 */
+.adm-booking-box {text-align: center; margin-bottom: 20px; padding: 20px;}
+.adm-booking-box h1{text-align: center; margin-bottom: 20px;margin-bottom: 5px;}
+.adm-booking-table{background: #fff;}
+.adm-booking-table ul.table-hd{text-align: center; border-top: 2px solid #000; font-size: 14px; font-weight: bold;}
+.adm-booking-table ul.table-bd{text-align: center;}
+.adm-booking-table ul.table-bd .subject{text-align: left;}
+
+.adm-booking-table ul li{display: table; width: 100%;}
+.adm-booking-table ul li > div{display: table-cell;border-bottom:1px solid #ccc; padding: 10px;}
+
+.adm-booking-table ul li > div.no {width: 10%;}
+.adm-booking-table ul li > div.name {width: 45%;}
+.adm-booking-table ul li > div.type {width: 25%;}
+.adm-booking-table ul li > div.type img {max-height: 100px;}
+.adm-booking-table ul li > div.control {width: 10%;}
+.adm-booking-table ul li > div.date {width: 10%;}
+
+.adm-booking-table ul li div.control span.modi a{color: blue; font-weight: bold;}
+.adm-booking-table ul li div.control span.del a{color: red;font-weight: bold;}
+
+
+/* 관리자 장소 등록 영역 */
+.adm-booking-form {max-width: 800px; margin: 0 auto; border :1px solid #e1e1e1; border-radius:25px; padding: 20px; background: #fff;box-shadow : 0px 3px 5px 2px rgb(0 0 0 /20%);}
+.adm-booking-form ul li {font-size: 17px; padding: 10px;}
+.adm-booking-form ul li label {float : left; padding: 5px; display: block;}
+.adm-booking-form ul li input[type="text"] {width: 100%; border: 1px solid #ccc; padding: 5px; border-radius:10px;}
+.adm-booking-form ul li textarea {width: 100%; height: 200px;}
+.adm-booking-form ul li.check{display: inline-block;}
+.adm-booking-form ul li.check input {float : left; padding: 5px; margin: 14px 0;}
+.adm-booking-form select {width: 10%}
+
+
+
+/* 메인 페이지 배너 */
+.main-popup-box {position: absolute;z-index: 999; top:30px; left:30px; border: 2px solid black;}
+.main-popup-box img{max-width: 500px; min-width: 500px;}
+.main-popup-box .pop-btn{text-align: right; background: #fff;}
+.main-popup-box .pop-btn a{display: inline-block;background: #000;color: #fff;padding: 5px;}

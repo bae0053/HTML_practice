@@ -1,0 +1,116 @@
+<?php include("../sub_header.php");?>
+
+		<!-- 관리자 메뉴 -->
+	<div class="adm-menu">
+            <div>
+                <ul>
+					<li><a href="../adm/set.html">환경설정</a></li>
+					<li><a href="../adm/borad.html">게시판 관리</a></li>
+					<li class="on"><a href="../adm/member.html">회원 관리</a></li>
+					<li><a href="../adm/popup.html">팝업 관리</a></li>
+					<li><a href="../adm/banner.html">배너 관리</a></li>
+					<li><a href="../adm/booking.html">장소 관리</a></li>
+                </ul>
+            </div>
+    </div>
+
+
+<style>
+
+</style>
+
+
+
+<div class="contents">
+
+	<div class="member-wrap">
+	<div class="member-box">
+		<h1>회원 관리</h1>
+
+		<div class="search-box adm-search">
+			<input type="text">
+			<button>검색</button>
+		</div>
+
+
+		<div class="member-table">
+			<ul class="table-hd">
+				<li>
+					<div class="no">번호</div>
+					<div class="name">이름</div>
+					<div class="phone">연락처</div>
+					<div class="mail">이메일</div>
+					<div class="birth">생년월일</div>
+					<div class="address">주소</div>
+					<div class="date">등록일</div>
+					<div class="control">관리</div>
+				</li>
+			</ul>
+
+			<ul class="table-bd">
+				<li>
+					<div class="no">3</div>
+					<div class="name">최어쩌구</div>
+					<div class="phone">01087654321</div>
+					<div class="mail">aa11553@naver.com</div>
+					<div class="birth">95.1.24</div>
+					<div class="address">대구 동구</div>
+					<div class="date">2021.04.21</div>
+					<div class="control">						
+						<span class="modi"><a href="./member_form.html">수정</a></span>
+						<span class="del"><a href="#none">삭제</a></span>
+					</div>
+				</li>
+				<li>
+					<div class="no">2</div>
+					<div class="name">김아무개</div>
+					<div class="phone">01012346578</div>
+					<div class="mail">aassd22@naver.com</div>
+					<div class="birth">95.12.24</div>
+					<div class="address">대구 동구</div>
+					<div class="date">2021.04.21</div>
+					<div class="control">						
+						<span class="modi"><a href="./member_form.html">수정</a></span>
+						<span class="del"><a href="#none">삭제</a></span>
+					</div>
+				</li>
+				<li>
+					<div class="no">1</div>
+					<div class="name">배상진</div>
+					<div class="phone">01087190053</div>
+					<div class="mail">bae8719@naver.com</div>
+					<div class="birth">95.11.14</div>
+					<div class="address">대구 동구</div>
+					<div class="date">2021.04.21</div>
+					<div class="control">
+						<span class="modi">
+							<a href="./member_form.html">수정</a>
+						</span>
+						<span class="del"><a href="#none">삭제</a></span>
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="paging">
+			<ul>
+				<li><a href="#none">처음으로</a></li>
+				<li><a href="#none">이전</a></li>
+				<li class = "on"><a href="#none">1</a></li>
+				<li><a href="#none">2</a></li>
+				<li><a href="#none">3</a></li>
+				<li><a href="#none">다음</a></li>
+				<li><a href="#none">마지막</a></li>
+			</ul>
+		</div>
+
+
+		<div class="borad-btn-box">
+			<a href="./member_form.html">회원 등록</a>
+		</div>
+
+	</div>
+</div>
+</div>
+
+<?php include("../sub_footer.php");?>

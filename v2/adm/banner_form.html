@@ -1,0 +1,69 @@
+<?php include("../sub_header.php");?>
+
+		<!-- 관리자 메뉴 -->
+	<div class="adm-menu">
+            <div>
+                <ul>
+					<li><a href="./set.html">환경설정</a></li>
+					<li><a href="./borad.html">게시판 관리</a></li>
+					<li><a href="./member.html">회원 관리</a></li>
+					<li><a href="./popup.html">팝업 관리</a></li>
+					<li class="on"><a href="./banner.html">배너 관리</a></li>
+					<li><a href="./booking.html">장소 관리</a></li>
+                </ul>
+            </div>
+    </div>
+
+
+	<!-- 게시판 생성 -->
+
+
+
+<div class="contents">
+
+	<div class="banner-f-wrap">
+			<div class="banner-f-box">
+			<h1>배너 관리</h1>
+
+			<div class="banner-form">
+				<ul>
+					<li>
+						<label for="">배너명</label>
+						<input type="text">
+					</li>
+					<li>
+						<label for="">첨부파일</label>
+						 <input type="file">
+					</li>
+					<li class="period-input">
+						<label for="">사용기간</label>
+						<input type="date"> ~
+						<input type="date">
+					</li>
+					<li>
+						<label for="">위치</label>
+						<select name="" id="">
+							<option value="">상단</option>
+							<option value="">하단</option>
+						</select>
+					</li>
+					<li class="check">
+						<label for="">사용여부</label>
+						<input type="checkbox" id ="check-noice">
+						<label for="check-notice">체크시 사용</label>
+					</li>
+				</ul>
+			</div>
+
+
+
+			<div class="bbs-btn-box popup-f-btn">
+				<a href="./banner.html">이전</a>
+				<a href="#none">저장</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- 콘텐츠 끝 -->
+
+<?php include("../sub_footer.php");?>

@@ -1,0 +1,86 @@
+<?php include("../sub_header.php");?>
+
+		<!-- 관리자 메뉴 -->
+	<div class="adm-menu">
+            <div>
+                <ul>
+					<li><a href="./set.html">환경설정</a></li>
+					<li><a href="./borad.html">게시판 관리</a></li>
+					<li><a href="./member.html">회원 관리</a></li>
+					<li><a href="./popup.html">팝업 관리</a></li>
+					<li><a href="./banner.html">배너 관리</a></li>
+					<li class="on"><a href="./booking.html">장소 관리</a></li>
+                </ul>
+            </div>
+    </div>
+
+	<!-- 게시판 관리 -->
+
+
+
+<style>
+
+
+
+</style>
+
+
+<div class="contents">
+
+	<div class="adm-booking-wrap">
+	<div class="adm-booking-box">
+		<h1>장소 관리</h1>
+
+		<div class="search-box adm-search">
+			<input type="text">
+			<button>검색</button>
+		</div>
+
+
+		<div class="adm-booking-table">
+			<ul class="table-hd">
+				<li>
+					<div class="no">번호</div>
+					<div class="type">이미지</div>
+					<div class="name">장소명</div>
+					<div class="date">글쓴이</div>
+					<div class="control">관리</div>
+				</li>
+			</ul>
+
+			<ul class="table-bd">
+				<li>
+					<div class="no">1</div>
+					<div class="type"><img src="../img/r01.jpg" alt=""></div>
+					<div class="name">최저가</div>
+					<div class="date">2021.04.20</div>
+					<div class="control">
+						<span class="modi"><a href="./booking_form.html">수정</a></span>
+						<span class="del"><a href="#none">삭제</a></span>
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+		<div class="paging">
+			<ul>
+				<li><a href="#none">처음으로</a></li>
+				<li><a href="#none">이전</a></li>
+				<li class = "on"><a href="#none">1</a></li>
+				<li><a href="#none">2</a></li>
+				<li><a href="#none">3</a></li>
+				<li><a href="#none">다음</a></li>
+				<li><a href="#none">마지막</a></li>
+			</ul>
+		</div>
+
+
+		<div class="borad-btn-box">
+			<a href="./booking_form.html">장소 등록</a>
+		</div>
+
+	</div>
+</div>
+</div>
+
+<?php include("../sub_footer.php");?>

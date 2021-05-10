@@ -1,0 +1,81 @@
+/* header 수정 */
+.header {position: fixed;width: 100%; z-index: 9999; top:0;left:0;}
+body {margin-top: 100px;}
+.header h1 a img {height: 30px;}
+.header .tnb {margin-top: 20px;}
+
+.header .gnb {width: 100%; clear:both;}
+.header .gnb ul li { margin: 0; width: 25%;}
+.header .gnb ul li a {text-align: center;}
+
+
+
+/* footer 수정 */
+.footer {margin-top: 100px;}
+.footer > div {width: 100%;}
+.footer > div > div.f-logo {padding: 5px; margin: 5px;}
+.footer > div > div.f-logo h1 a img {height: 30px;}
+.footer > div > div.f-logo h1 a{font-size: 10px;}
+.footer > div > div.f-copy{margin: 10px 0 20px 20px;font-size: 10px;}
+
+/* index 수정 */
+.main-visual {height: 500px;}
+.main-visual h2 {font-size: 20px;padding-top: 110px;padding-bottom: 10px;padding-left:0;}
+.main-visual p {font-size: 20px; padding-top: 20px;}
+
+.numbers-wrap .numbers h2{font-size: 25px;}
+.numbers-wrap .numbers p {font-size: 15px; margin-bottom: 10px;}
+.numbers-wrap .numbers .num-data ul {margin-bottom: 50px;}
+.numbers-wrap .numbers .num-data ul li{width: 100%; padding-top: 20px;}
+.numbers-wrap .numbers .num-data ul li p {font-size: 30px;}
+.numbers-wrap .numbers .num-data ul li span {font-size: 13px;}
+
+
+.m-g-box {width: 100%;}
+.m-g-box h2{font-size: 30px;}
+
+.main-gallery-wrap {margin-top: 100px;}
+.main-gallery li {width: 100%; padding: 0;}
+.main-gallery li > div .info h3 {font-size: 17px;}
+
+/* 회사소개 수정 */
+#section1{background-position : center 100px;}
+.section0-box h2 {font-size: 25px;padding-bottom: 200px;padding-left: 80px;}
+.section1-box h2 {font-size: 25px;}
+.section2-box h2 {font-size: 25px;}
+.section3-box h2 {font-size: 25px;}
+
+
+
+/* 게시판 수정 */
+.snb-wrap > div {width: 100%;}
+.snb-wrap li > a {padding: 15px;font-size: 15px;}
+
+.search-box {width: 100%;}
+.notice-box{width: 100%;}
+.notice-box li div.title {width: 50%;}
+.notice-box li div.writer{width: 20%;}
+.notice-box li div.date{width: 20%;}
+
+
+.notice-box ul.table-hd { font-size: 12px;}
+.notice-box ul.table-bd { font-size: 12px;}
+
+.write-btn{width: 100%;}
+
+.gallery-box li {width: 100%;}
+.view-btn a {margin: 20px 5px;}
+
+/* 예약하기 수정 */
+.booking-wrap ul li {padding: 0;}
+.booking-wrap ul li .booking-box > div.thumb {width: 100%;}
+.booking-wrap ul li .booking-box > div.info {width: 100%;}
+
+.cal-box ul {padding: 0;}
+
+
+/* 예약확인 수정 */
+.b-check-box ul li {font-size: 12px; padding: 5px;}
+.b-check-box ul li div.title {width: 40%;}
+.b-check-box ul li div.b-date {width: 20%;}
+.b-check-box ul li div.r-date {width: 20%;}

@@ -1,0 +1,35 @@
+<?php include("../sub_header.php");?>
+
+<div id="fullpage">
+	<div class="section " id="section0">
+		<div class="section0-box">
+			<h2>청춘을 노래하는 가수</h2>
+		</div>
+	</div>
+	<div class="section" id="section1">
+	    <div class="section1-box">
+			<h2>여수 바다 앞에서 꼭 들어야하는 목소리</h2>
+	    </div>
+	</div>
+	<div class="section" id="section2">
+		<div class="section2-box">
+			<h2>벚꽃이 필 때마다 웃는 남자</h2>
+		</div>
+	</div>
+	<div class="section" id="section3">
+		<div class="section3-box">
+			<h2>장범준</h2>
+			<p>그를 소개합니다.</p>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage'],
+        /*sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],*/
+        scrollBar: true
+    });
+</script>
+
+<?php include("../sub_footer.php");?>

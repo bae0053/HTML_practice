@@ -1,0 +1,89 @@
+/* 헤더 수정 */ 
+.header{background: #3e80be; overflow :hidden;}
+.header .logo h1 img {width: 80px;}
+.header .top-btn ul {margin-top: 5px;}
+
+.header .top-btn ul li a { padding: 10px 5px; font-size: 12px;}
+
+.menu > div > ul > li > a {font-size: 14px; padding: 5px 8px;}
+
+/* 모바일에서 메뉴 */
+.m-menu{position: absolute; right : 10px; top :50px; z-index: 9999;}
+.m-menu a{display: block; width: 25px; height: 22px; position: relative; transition:all 0.3s;}
+.m-menu a span {width: 100%; height: 2px;background: #000;display: block;position: absolute; transition:all 0.3s;}
+.m-menu a span:nth-child(1){top:0;}
+.m-menu a span:nth-child(2){top:10px;}
+.m-menu a span:nth-child(3){bottom: 0;}
+
+
+/*중간이 사라지고 상하가 엑스 만들기*/
+.m-menu a.active span:nth-child(1){transform : translateY(10px) rotate(-45deg);}
+.m-menu a.active span:nth-child(2) {opacity: 0;}
+.m-menu a.active span:nth-child(3){transform : translateY(-10px) rotate(45deg);}
+
+.menu {position: fixed;z-index: 9999;left: -100%;width: 100%;max-width: 200px;height: 100%; transition : all 0.3s; background: #fff;}
+.menu > div > ul > li {display: block;}
+.menu > div > ul > li a{padding: 10px; font-size: 15px;color: #000;border-bottom: 1px solid #e1e1e1;}
+
+.menu > div > ul > li > ul.sub-menu {position: relative;background: #efefef;}
+.menu > div > ul > li > ul.sub-menu a{font-size: 12px;}
+
+/* 메인페이지 배너 크기 수정*/
+.banner .swiper-container img {height: auto;}
+
+.bbs-box > div > .board-box {width: 100%; float: none;}
+.bbs-box > div > .right-banner {width: 100%; float: none;}
+
+.bbs-box > div > .right-banner .r-slide img {height: 200px;}
+
+/* 하단 정보 수정 */
+.footer h1 {font-size: 12px;}
+.footer p{font-size: 10px;}
+.footer span{font-size: 9px;}
+
+html.active .menu{left:0%}
+
+
+/* 갤러리 게시판 수정 */
+.gallery-table > ul > li{width: 50%; float: left;}
+.gallery-table > ul > li:nth-child(4n+1) {clear:unset;}
+
+/*장소 게시판 수정 */
+.booking-table .thumb{width: 35%;}
+.booking-table .info{width: 65%;}
+.booking-table .info p{min-height: 50px; max-height: 50px;}
+
+/* 장소예약 수정 */ 
+.booking-view .photo-box .view-photo{width: 100%; float: none;}
+.booking-view .photo-box .calendar{width: 100%; float: none;}
+
+/* 마이페이지 */ 
+.mypage-table{background: #f5f5f5;}
+
+.mypage-table ul li {
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+	overflow: hidden;
+	background: #fff;
+}
+
+.mypage-table ul li > div{
+    display: block;
+    border: 0px solid #ccc;
+	float: left;
+}
+
+.mypage-table ul.table-hd { display: none; }
+
+
+.mypage-table ul li div.no {width: 15%;}
+.mypage-table .table-bd li div.location {width: 85%;}
+.mypage-table ul li div.status {width: 15%;}
+.mypage-table ul li div.booking-date {width: auto;}
+.mypage-table ul li div.booking-date:before {content: "등록일 : ";}
+.mypage-table ul li div.regi-date {width: auto;}
+.mypage-table ul li div.regi-date:before {content: "예약일 : ";}
+
+.join-box .join-form label {display: block;}
